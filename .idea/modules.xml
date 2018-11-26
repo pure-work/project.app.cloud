@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/account/account-center.iml" filepath="$PROJECT_DIR$/account/account-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account-service/account-service.iml" filepath="$PROJECT_DIR$/account-service/account-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-center/config-center.iml" filepath="$PROJECT_DIR$/config-center/config-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gate-way/gate-way.iml" filepath="$PROJECT_DIR$/gate-way/gate-way.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/project.app.cloud.iml" filepath="$PROJECT_DIR$/.idea/project.app.cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-center/service-center.iml" filepath="$PROJECT_DIR$/service-center/service-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-center-back/service-center-back.iml" filepath="$PROJECT_DIR$/service-center-back/service-center-back.iml" />
+    </modules>
+  </component>
+</project>
