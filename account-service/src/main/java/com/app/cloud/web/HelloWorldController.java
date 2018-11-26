@@ -7,14 +7,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/demo/")
 public class HelloWorldController {
 
     @Autowired
     private Account account;
 
-    @RequestMapping(value = "/demoAdd")
-    public String add(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b) {
-        return "accountClient result is "+account.add(a, b)
-                +",consumerClient random is "+Math.random();
+    @RequestMapping(value = "/add")
+    public String add(Integer a, Integer b) {
+        return "account result is "+account.add(a, b)
+                +",consumer random is "+Math.random();
     }
 }

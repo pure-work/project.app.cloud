@@ -1,9 +1,13 @@
 
 spring:
-  application:
-    name: service-center
+  profiles:
+    active: dev
   cloud:
     config:
-      profile: dev
+      profile: ${spring.profiles.active}
       label: master
       uri: http://127.0.0.1:8888/
+
+logging:
+  config:
+    classpath:logback-springboot-${spring.profiles.active}.xml
