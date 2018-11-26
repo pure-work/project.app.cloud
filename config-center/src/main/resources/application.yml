@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: config-center
+#  profiles:
+#    active: native
+  cloud:
+    config:
+      server:
+        git:
+          default-label: master
+          search-paths: /**
+          uri: https://github.com/pure-work/project.app.cloud.config.git
+          #basedir: config-center/target/config
+server:
+  port: 8888
