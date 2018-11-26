@@ -6,8 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
-//@EnableCircuitBreaker
-//@EnableHystrix
+@EnableHystrix
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication

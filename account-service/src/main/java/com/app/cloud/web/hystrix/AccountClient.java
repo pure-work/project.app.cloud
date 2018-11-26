@@ -5,8 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value="account")
+@FeignClient(name = "accountClient", fallback = AccountClientFallback.class)
 public interface AccountClient {
+
     @RequestMapping(value = "/add")
     String add(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
 

@@ -12,7 +12,6 @@
         <module name="config-center" />
         <module name="gate-way" />
         <module name="service-center" />
-        <module name="service-center-back" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
