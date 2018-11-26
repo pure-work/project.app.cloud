@@ -8,7 +8,7 @@
     <!--<property name="PROJECT_NAME" value="pretty-api"/>-->
     <springProperty name="PROJECT_NAME" scope="context" source="spring.application.name" />
 
-    <property name="logname" value="./logs/${PROJECT_NAME}" />
+    <property name="logname" value="/logs/${PROJECT_NAME}" />
 
     <appender name="logfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <Prudent>true</Prudent>
