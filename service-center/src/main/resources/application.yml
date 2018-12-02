@@ -1,3 +1,31 @@
 spring:
   application:
     name: service-center
+  profiles:
+      active: dev
+
+logging:
+  config:
+    classpath:logback-springboot-${spring.profiles.active}.xml
+
+server:
+  port: 7001
+  back:
+    port: 7002
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    back:
+      hostname: 127.0.0.1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      #注册到其他注册中心去
+      #defaultZone: http://${eureka.instance.back.hostname}:${server.back.port}/eureka/
+      #注册到自己去
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #defaultZone: http://localhost:7001/eureka/
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 10000

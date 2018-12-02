@@ -6,12 +6,10 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/config-center/pom.xml" />
         <option value="$PROJECT_DIR$/service-center/pom.xml" />
         <option value="$PROJECT_DIR$/gate-way/pom.xml" />
         <option value="$PROJECT_DIR$/account-center/pom.xml" />
         <option value="$PROJECT_DIR$/account/pom.xml" />
-        <option value="$PROJECT_DIR$/account-service/pom.xml" />
       </list>
     </option>
   </component>

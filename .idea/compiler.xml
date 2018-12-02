@@ -8,8 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="account" />
-        <module name="account-service" />
-        <module name="config-center" />
         <module name="gate-way" />
         <module name="service-center" />
       </profile>
@@ -18,9 +16,9 @@
       <module name="account" target="1.8" />
       <module name="account-service" target="1.8" />
       <module name="config-center" target="1.8" />
+      <module name="core" target="1.8" />
       <module name="gate-way" target="1.8" />
       <module name="service-center" target="1.8" />
-      <module name="service-center-back" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

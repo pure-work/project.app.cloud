@@ -1,6 +1,6 @@
 package com.app.cloud;
 
-import com.app.cloud.filter.AccessTokenFilter;
+import com.app.cloud.filter.RequestLoggerFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
@@ -17,8 +17,8 @@ public class GateWayApplication {
     }
     //添加过滤器
     @Bean
-    public AccessTokenFilter accessTokenFilter() {
-        return new AccessTokenFilter();
+    public RequestLoggerFilter accessTokenFilter() {
+        return new RequestLoggerFilter();
     }
 
 }

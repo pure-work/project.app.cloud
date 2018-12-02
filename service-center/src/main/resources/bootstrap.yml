@@ -1,13 +1,13 @@
 
-spring:
-  profiles:
-    active: dev
-  cloud:
-    config:
-      profile: ${spring.profiles.active}
-      label: master
-      uri: http://127.0.0.1:8888/
+#spring:
+  #profiles:
+    #active: dev
+  #cloud:
+    #config:
+      #profile: ${spring.profiles.active}
+      #label: master
+      #uri: http://127.0.0.1:8888/
 
-logging:
-  config:
-    classpath:logback-springboot-${spring.profiles.active}.xml
+#logging:
+  #config:
+    #classpath:logback-springboot-${spring.profiles.active}.xml
