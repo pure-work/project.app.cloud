@@ -1,26 +1,23 @@
-package com.app.cloud.account.user.service.impl;
+package com.app.cloud.user.account.service.impl;
 
-import com.app.cloud.account.user.dao.UserAccountMapper;
-import com.app.cloud.account.user.service.UserAccountService;
-import com.netflix.discovery.converters.Auto;
+import com.app.cloud.user.account.dao.UserAccountMapper;
+import com.app.cloud.user.account.entity.UserAccount;
+import com.app.cloud.user.account.service.UserAccountService;
+import com.app.core.base.service.BaseServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.common.BaseMapper;
 
-//@Service
-public class UserAccountServiceImpl implements UserAccountService {
+@Service
+public class UserAccountServiceImpl extends BaseServiceImpl<UserAccountMapper, UserAccount> implements UserAccountService {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
-    private UserAccountMapper userAccountMapper;
-
     public Integer getTotalRow(){
-        return userAccountMapper.getTotalRow();
+        return baseMapper.selectCount(new UserAccount());
+        //return userAccountMapper.getTotalRow();
     }
 
     @Scheduled(cron = "0 0/5 * * * ?")//每五分钟

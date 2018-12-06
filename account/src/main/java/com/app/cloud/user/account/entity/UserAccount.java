@@ -1,6 +1,6 @@
-package com.app.cloud.account.user.entity;
+package com.app.cloud.user.account.entity;
 
-import com.app.cloud.web.BaseEntity;
+import com.app.core.base.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;

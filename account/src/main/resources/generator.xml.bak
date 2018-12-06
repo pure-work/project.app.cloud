@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="generator.properties"/> <!--这里记录了数据库连接-->
+    <!--指定特定数据库的jdbc驱动jar包的位置 -->
+    <!--<classPathEntry location="${jdbc.driverLocation}"/>-->
+    <context defaultModelType="flat" id="mysql" targetRuntime="MyBatis3Simple">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 生成根Mapper，用户可以看后边代码 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.app.cloud.core.base.dao.BaseMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${jdbc.connectionURL}"
+                        userId="${jdbc.userId}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+
+        <!-- java类型处理器
+       用于处理DB中的类型到Java中的类型，默认使用JavaTypeResolverDefaultImpl；
+       注意一点，默认会先尝试使用Integer，Long，Short等来对应DECIMAL和 NUMERIC数据类型；
+       -->
+        <javaTypeResolver type="org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl">
+            <!--
+                true：使用BigDecimal对应DECIMAL和 NUMERIC数据类型
+                false：默认,
+                    scale>0;length>18：使用BigDecimal;
+                    scale=0;length[10,18]：使用Long；
+                    scale=0;length[5,9]：使用Integer；
+                    scale=0;length<5：使用Short；
+             -->
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.app.cloud.user.account.entity"
+                            targetProject="src/main/java">
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper/account"
+                         targetProject="src/main/resources">
+        </sqlMapGenerator>
+        <!--
+            1，ANNOTATEDMAPPER：会生成使用Mapper接口+Annotation的方式创建（SQL生成在annotation中），不会生成对应的XML；
+            2，XMLMAPPER：会生成Mapper接口，接口完全依赖XML；
+        -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.app.cloud.user.account.dao"
+                             targetProject="src/main/java">
+        </javaClientGenerator>
+
+        <table tableName="user_account" domainObjectName="UserAccount">
+            <property name="rootClass" value="com.app.cloud.core.base.entity.BaseEntity" />
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+            <ignoreColumn column="id" />
+            <ignoreColumn column="create_time" />
+            <ignoreColumn column="modify_time" />
+        </table>
+    </context>
+</generatorConfiguration>

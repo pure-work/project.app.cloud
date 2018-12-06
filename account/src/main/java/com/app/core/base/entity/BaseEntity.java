@@ -1,4 +1,4 @@
-package com.app.cloud.web;
+package com.app.core.base.entity;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonFormat;
