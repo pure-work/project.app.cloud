@@ -5,14 +5,13 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@EnableDiscoveryClient
 @SpringBootApplication
-@MapperScan(basePackages = "com.app.cloud.**.dao", markerInterface = BaseMapper.class)
-public class AccountApplication {
+@MapperScan(basePackages = "com.app.api.**.dao", markerInterface = BaseMapper.class)
+public class AppApiApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(AccountApplication.class, args);
+        SpringApplication.run(AppApiApplication.class, args);
 
     }
 }

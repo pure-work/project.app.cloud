@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/gate-way/pom.xml" />
         <option value="$PROJECT_DIR$/account-center/pom.xml" />
         <option value="$PROJECT_DIR$/account/pom.xml" />
+        <option value="$PROJECT_DIR$/app-api/pom.xml" />
       </list>
     </option>
   </component>

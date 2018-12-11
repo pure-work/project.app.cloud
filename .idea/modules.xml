@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/account/account.iml" filepath="$PROJECT_DIR$/account/account.iml" />
       <module fileurl="file://$PROJECT_DIR$/account/account-center.iml" filepath="$PROJECT_DIR$/account/account-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-api/app-api.iml" filepath="$PROJECT_DIR$/app-api/app-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/gate-way/gate-way.iml" filepath="$PROJECT_DIR$/gate-way/gate-way.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/project.app.cloud.iml" filepath="$PROJECT_DIR$/.idea/project.app.cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-center/service-center.iml" filepath="$PROJECT_DIR$/service-center/service-center.iml" />
