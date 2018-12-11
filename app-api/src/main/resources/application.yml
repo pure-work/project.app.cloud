@@ -1,6 +1,6 @@
 server:
   port: 8001
-  context-path: /app
+  context-path: /gozi
   servlet-path: /
 logging:
   config:
